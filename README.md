@@ -7,6 +7,8 @@ Author: Saša Banjac
  + For description and validation, please read the AtRIS validation papers by Banjac et al (2018).
  + Documentation can be found on ~~https://et-wiki.physik.uni-kiel.de/atris/atris~~
  + Documentation being ported to: https://github.com/natestone/atris/wiki
+ + Original archive from Zenodo: https://zenodo.org/records/3633451
+ + Detailed description and validation: https://doi.org/10.1029/2018JA026042
  + Author: Saša Banjac
  + 
 
