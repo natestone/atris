@@ -1,0 +1,13 @@
+  <material name="G4_CHLOROMETHANE">
+                <D value="1.003" unit="g/cm3" />
+                <fraction n="0.059899" ref="G4_H" />
+                <fraction n="0.237912" ref="G4_C" />
+                <fraction n="0.702189" ref="G4_Cl" />
+        </material>
+        <element name="videRef" formula="VACUUM" Z="1">
+                <atom value="1"/>
+        </element>
+        <material name="Vacuum" formula="Vacuum">
+                <D value="1E-25" unit="g/cm3"/>
+                <fraction n="1.0" ref="videRef"/>
+        </material>

@@ -1,0 +1,1516 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+
+
+
+<define>
+	<constant name="PI" value="1.*pi"/>
+	<constant name="TWOPI" value="2.*pi"/>
+	<position name="center"/>
+	<rotation name="identity"/>
+	<position name="boxoffset" x="-7000.000000" y="-7000.000000" z="-7000.000000" unit="km" />
+</define>
+<materials>
+  <material name="G4_CHLOROMETHANE">
+                <D value="1.003" unit="g/cm3" />
+                <fraction n="0.059899" ref="G4_H" />
+                <fraction n="0.237912" ref="G4_C" />
+                <fraction n="0.702189" ref="G4_Cl" />
+        </material>
+        <element name="videRef" formula="VACUUM" Z="1">
+                <atom value="1"/>
+        </element>
+        <material name="Vacuum" formula="Vacuum">
+                <D value="1E-25" unit="g/cm3"/>
+                <fraction n="1.0" ref="videRef"/>
+        </material>
+<material name="material0" state="solid">
+	<D value="5.800000e+00" unit="g/cm3" />
+	<T value="3.030000e+02" unit="K" />
+	<P value="9.904000e+04" unit="Pa" />
+	<fraction n="0.284" ref="G4_Si" />
+	<fraction n="0.052" ref="G4_Fe" />
+	<fraction n="0.015" ref="G4_Mg" />
+	<fraction n="0.028" ref="G4_Na" />
+	<fraction n="0.037" ref="G4_Ca" />
+	<fraction n="0.084" ref="G4_Al" />
+	<fraction n="0.478" ref="G4_O" />
+</material>
+<material name="material1" state="solid">
+	<D value="5.800000e+00" unit="g/cm3" />
+	<T value="3.030000e+02" unit="K" />
+	<P value="9.904000e+04" unit="Pa" />
+	<fraction n="0.284" ref="G4_Si" />
+	<fraction n="0.052" ref="G4_Fe" />
+	<fraction n="0.015" ref="G4_Mg" />
+	<fraction n="0.028" ref="G4_Na" />
+	<fraction n="0.037" ref="G4_Ca" />
+	<fraction n="0.084" ref="G4_Al" />
+	<fraction n="0.478" ref="G4_O" />
+</material>
+<material name="material2" state="gas">
+	<D value="1.160000e-03" unit="g/cm3" />
+	<T value="3.030000e+02" unit="K" />
+	<P value="9.904000e+04" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.002" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.238" ref="G4_O" />
+	<fraction n="0.746" ref="G4_N" />
+</material>
+<material name="material3" state="gas">
+	<D value="1.045000e-03" unit="g/cm3" />
+	<T value="2.995000e+02" unit="K" />
+	<P value="8.852000e+04" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.002" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.236" ref="G4_O" />
+	<fraction n="0.749" ref="G4_N" />
+</material>
+<material name="material4" state="gas">
+	<D value="9.416000e-04" unit="g/cm3" />
+	<T value="2.958000e+02" unit="K" />
+	<P value="7.899000e+04" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.001" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.234" ref="G4_O" />
+	<fraction n="0.751" ref="G4_N" />
+</material>
+<material name="material5" state="gas">
+	<D value="8.475000e-04" unit="g/cm3" />
+	<T value="2.920000e+02" unit="K" />
+	<P value="7.037000e+04" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.001" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.232" ref="G4_O" />
+	<fraction n="0.753" ref="G4_N" />
+</material>
+<material name="material6" state="gas">
+	<D value="7.622000e-04" unit="g/cm3" />
+	<T value="2.881000e+02" unit="K" />
+	<P value="6.258000e+04" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.001" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.231" ref="G4_O" />
+	<fraction n="0.755" ref="G4_N" />
+</material>
+<material name="material7" state="gas">
+	<D value="6.851000e-04" unit="g/cm3" />
+	<T value="2.840000e+02" unit="K" />
+	<P value="5.556000e+04" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.001" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.230" ref="G4_O" />
+	<fraction n="0.756" ref="G4_N" />
+</material>
+<material name="material8" state="gas">
+	<D value="6.153000e-04" unit="g/cm3" />
+	<T value="2.798000e+02" unit="K" />
+	<P value="4.923000e+04" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.001" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.229" ref="G4_O" />
+	<fraction n="0.757" ref="G4_N" />
+</material>
+<material name="material9" state="gas">
+	<D value="5.524000e-04" unit="g/cm3" />
+	<T value="2.753000e+02" unit="K" />
+	<P value="4.353000e+04" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.228" ref="G4_O" />
+	<fraction n="0.758" ref="G4_N" />
+</material>
+<material name="material10" state="gas">
+	<D value="4.950000e-04" unit="g/cm3" />
+	<T value="2.708000e+02" unit="K" />
+	<P value="3.841000e+04" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.227" ref="G4_O" />
+	<fraction n="0.759" ref="G4_N" />
+</material>
+<material name="material11" state="gas">
+	<D value="4.432000e-04" unit="g/cm3" />
+	<T value="2.661000e+02" unit="K" />
+	<P value="3.382000e+04" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.227" ref="G4_O" />
+	<fraction n="0.759" ref="G4_N" />
+</material>
+<material name="material12" state="gas">
+	<D value="3.968000e-04" unit="g/cm3" />
+	<T value="2.609000e+02" unit="K" />
+	<P value="2.971000e+04" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.227" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material13" state="gas">
+	<D value="3.555000e-04" unit="g/cm3" />
+	<T value="2.550000e+02" unit="K" />
+	<P value="2.602000e+04" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material14" state="gas">
+	<D value="3.173000e-04" unit="g/cm3" />
+	<T value="2.494000e+02" unit="K" />
+	<P value="2.272000e+04" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material15" state="gas">
+	<D value="2.810000e-04" unit="g/cm3" />
+	<T value="2.453000e+02" unit="K" />
+	<P value="1.979000e+04" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material16" state="gas">
+	<D value="2.470000e-04" unit="g/cm3" />
+	<T value="2.425000e+02" unit="K" />
+	<P value="1.720000e+04" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material17" state="gas">
+	<D value="2.163000e-04" unit="g/cm3" />
+	<T value="2.403000e+02" unit="K" />
+	<P value="1.493000e+04" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material18" state="gas">
+	<D value="1.890000e-04" unit="g/cm3" />
+	<T value="2.384000e+02" unit="K" />
+	<P value="1.294000e+04" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material19" state="gas">
+	<D value="1.647000e-04" unit="g/cm3" />
+	<T value="2.370000e+02" unit="K" />
+	<P value="1.121000e+04" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material20" state="gas">
+	<D value="1.431000e-04" unit="g/cm3" />
+	<T value="2.360000e+02" unit="K" />
+	<P value="9.703000e+03" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material21" state="gas">
+	<D value="1.244000e-04" unit="g/cm3" />
+	<T value="2.349000e+02" unit="K" />
+	<P value="8.391000e+03" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material22" state="gas">
+	<D value="1.080000e-04" unit="g/cm3" />
+	<T value="2.339000e+02" unit="K" />
+	<P value="7.252000e+03" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material23" state="gas">
+	<D value="9.359000e-05" unit="g/cm3" />
+	<T value="2.331000e+02" unit="K" />
+	<P value="6.264000e+03" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material24" state="gas">
+	<D value="8.105000e-05" unit="g/cm3" />
+	<T value="2.323000e+02" unit="K" />
+	<P value="5.408000e+03" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material25" state="gas">
+	<D value="7.013000e-05" unit="g/cm3" />
+	<T value="2.317000e+02" unit="K" />
+	<P value="4.667000e+03" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material26" state="gas">
+	<D value="6.065000e-05" unit="g/cm3" />
+	<T value="2.312000e+02" unit="K" />
+	<P value="4.027000e+03" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material27" state="gas">
+	<D value="5.243000e-05" unit="g/cm3" />
+	<T value="2.306000e+02" unit="K" />
+	<P value="3.472000e+03" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material28" state="gas">
+	<D value="4.530000e-05" unit="g/cm3" />
+	<T value="2.301000e+02" unit="K" />
+	<P value="2.993000e+03" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material29" state="gas">
+	<D value="3.914000e-05" unit="g/cm3" />
+	<T value="2.295000e+02" unit="K" />
+	<P value="2.580000e+03" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material30" state="gas">
+	<D value="3.380000e-05" unit="g/cm3" />
+	<T value="2.289000e+02" unit="K" />
+	<P value="2.222000e+03" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material31" state="gas">
+	<D value="2.920000e-05" unit="g/cm3" />
+	<T value="2.282000e+02" unit="K" />
+	<P value="1.913000e+03" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material32" state="gas">
+	<D value="2.522000e-05" unit="g/cm3" />
+	<T value="2.273000e+02" unit="K" />
+	<P value="1.647000e+03" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material33" state="gas">
+	<D value="2.179000e-05" unit="g/cm3" />
+	<T value="2.263000e+02" unit="K" />
+	<P value="1.416000e+03" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material34" state="gas">
+	<D value="1.882000e-05" unit="g/cm3" />
+	<T value="2.252000e+02" unit="K" />
+	<P value="1.217000e+03" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material35" state="gas">
+	<D value="1.624000e-05" unit="g/cm3" />
+	<T value="2.241000e+02" unit="K" />
+	<P value="1.045000e+03" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material36" state="gas">
+	<D value="1.400000e-05" unit="g/cm3" />
+	<T value="2.232000e+02" unit="K" />
+	<P value="8.973000e+02" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material37" state="gas">
+	<D value="1.204000e-05" unit="g/cm3" />
+	<T value="2.226000e+02" unit="K" />
+	<P value="7.697000e+02" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material38" state="gas">
+	<D value="1.035000e-05" unit="g/cm3" />
+	<T value="2.221000e+02" unit="K" />
+	<P value="6.600000e+02" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material39" state="gas">
+	<D value="8.884000e-06" unit="g/cm3" />
+	<T value="2.218000e+02" unit="K" />
+	<P value="5.658000e+02" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material40" state="gas">
+	<D value="7.626000e-06" unit="g/cm3" />
+	<T value="2.214000e+02" unit="K" />
+	<P value="4.849000e+02" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material41" state="gas">
+	<D value="6.543000e-06" unit="g/cm3" />
+	<T value="2.211000e+02" unit="K" />
+	<P value="4.155000e+02" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material42" state="gas">
+	<D value="5.613000e-06" unit="g/cm3" />
+	<T value="2.208000e+02" unit="K" />
+	<P value="3.559000e+02" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material43" state="gas">
+	<D value="4.813000e-06" unit="g/cm3" />
+	<T value="2.205000e+02" unit="K" />
+	<P value="3.049000e+02" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material44" state="gas">
+	<D value="4.126000e-06" unit="g/cm3" />
+	<T value="2.203000e+02" unit="K" />
+	<P value="2.611000e+02" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material45" state="gas">
+	<D value="3.536000e-06" unit="g/cm3" />
+	<T value="2.201000e+02" unit="K" />
+	<P value="2.235000e+02" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material46" state="gas">
+	<D value="3.030000e-06" unit="g/cm3" />
+	<T value="2.199000e+02" unit="K" />
+	<P value="1.913000e+02" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material47" state="gas">
+	<D value="2.597000e-06" unit="g/cm3" />
+	<T value="2.196000e+02" unit="K" />
+	<P value="1.638000e+02" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material48" state="gas">
+	<D value="2.226000e-06" unit="g/cm3" />
+	<T value="2.191000e+02" unit="K" />
+	<P value="1.401000e+02" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material49" state="gas">
+	<D value="1.909000e-06" unit="g/cm3" />
+	<T value="2.186000e+02" unit="K" />
+	<P value="1.199000e+02" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material50" state="gas">
+	<D value="1.637000e-06" unit="g/cm3" />
+	<T value="2.180000e+02" unit="K" />
+	<P value="1.025000e+02" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material51" state="gas">
+	<D value="1.403000e-06" unit="g/cm3" />
+	<T value="2.173000e+02" unit="K" />
+	<P value="8.759000e+01" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material52" state="gas">
+	<D value="1.203000e-06" unit="g/cm3" />
+	<T value="2.166000e+02" unit="K" />
+	<P value="7.483000e+01" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material53" state="gas">
+	<D value="1.032000e-06" unit="g/cm3" />
+	<T value="2.156000e+02" unit="K" />
+	<P value="6.387000e+01" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material54" state="gas">
+	<D value="8.852000e-07" unit="g/cm3" />
+	<T value="2.143000e+02" unit="K" />
+	<P value="5.447000e+01" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material55" state="gas">
+	<D value="7.597000e-07" unit="g/cm3" />
+	<T value="2.128000e+02" unit="K" />
+	<P value="4.643000e+01" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material56" state="gas">
+	<D value="6.521000e-07" unit="g/cm3" />
+	<T value="2.109000e+02" unit="K" />
+	<P value="3.949000e+01" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material57" state="gas">
+	<D value="5.593000e-07" unit="g/cm3" />
+	<T value="2.089000e+02" unit="K" />
+	<P value="3.356000e+01" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material58" state="gas">
+	<D value="4.795000e-07" unit="g/cm3" />
+	<T value="2.068000e+02" unit="K" />
+	<P value="2.848000e+01" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material59" state="gas">
+	<D value="4.103000e-07" unit="g/cm3" />
+	<T value="2.045000e+02" unit="K" />
+	<P value="2.410000e+01" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material60" state="gas">
+	<D value="3.510000e-07" unit="g/cm3" />
+	<T value="2.021000e+02" unit="K" />
+	<P value="2.038000e+01" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material61" state="gas">
+	<D value="3.001000e-07" unit="g/cm3" />
+	<T value="1.995000e+02" unit="K" />
+	<P value="1.719000e+01" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material62" state="gas">
+	<D value="2.570000e-07" unit="g/cm3" />
+	<T value="1.957000e+02" unit="K" />
+	<P value="1.445000e+01" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material63" state="gas">
+	<D value="2.209000e-07" unit="g/cm3" />
+	<T value="1.908000e+02" unit="K" />
+	<P value="1.211000e+01" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material64" state="gas">
+	<D value="1.911000e-07" unit="g/cm3" />
+	<T value="1.840000e+02" unit="K" />
+	<P value="1.010000e+01" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material65" state="gas">
+	<D value="1.669000e-07" unit="g/cm3" />
+	<T value="1.737000e+02" unit="K" />
+	<P value="8.325000e+00" unit="Pa" />
+	<fraction n="0.000" ref="G4_C" />
+	<fraction n="0.013" ref="G4_Ar" />
+	<fraction n="0.000" ref="G4_Cl" />
+	<fraction n="0.000" ref="G4_H" />
+	<fraction n="0.000" ref="G4_S" />
+	<fraction n="0.226" ref="G4_O" />
+	<fraction n="0.760" ref="G4_N" />
+</material>
+<material name="material66" state="solid">
+	<D value="8.345000e-04" unit="g/cm3" />
+	<T value="1.737000e+02" unit="K" />
+	<P value="8.325000e+00" unit="Pa" />
+	<fraction n="0.284" ref="G4_Si" />
+	<fraction n="0.052" ref="G4_Fe" />
+	<fraction n="0.015" ref="G4_Mg" />
+	<fraction n="0.028" ref="G4_Na" />
+	<fraction n="0.037" ref="G4_Ca" />
+	<fraction n="0.084" ref="G4_Al" />
+	<fraction n="0.478" ref="G4_O" />
+</material>
+</materials>
+<solids>
+	<box name="WorldBox" x="14000.000000" y="14000.000000" z="14000.000000" lunit="km"/>
+	<sphere name="solid0" rmin="0.000000" rmax="6365.000000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid1" rmin="6365.000000" rmax="6370.000000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid2" rmin="6370.000000" rmax="6371.008000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid3" rmin="6371.008000" rmax="6372.018000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid4" rmin="6372.018000" rmax="6373.024000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid5" rmin="6373.024000" rmax="6374.036000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid6" rmin="6374.036000" rmax="6375.040000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid7" rmin="6375.040000" rmax="6376.052000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid8" rmin="6376.052000" rmax="6377.058000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid9" rmin="6377.058000" rmax="6378.068000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid10" rmin="6378.068000" rmax="6379.076000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid11" rmin="6379.076000" rmax="6380.084000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid12" rmin="6380.084000" rmax="6381.096000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid13" rmin="6381.096000" rmax="6382.104000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid14" rmin="6382.104000" rmax="6383.116000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid15" rmin="6383.116000" rmax="6384.104000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid16" rmin="6384.104000" rmax="6385.136000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid17" rmin="6385.136000" rmax="6386.124000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid18" rmin="6386.124000" rmax="6387.156000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid19" rmin="6387.156000" rmax="6388.144000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid20" rmin="6388.144000" rmax="6389.176000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid21" rmin="6389.176000" rmax="6390.144000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid22" rmin="6390.144000" rmax="6391.196000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid23" rmin="6391.196000" rmax="6392.164000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid24" rmin="6392.164000" rmax="6393.216000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid25" rmin="6393.216000" rmax="6394.184000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid26" rmin="6394.184000" rmax="6395.236000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid27" rmin="6395.236000" rmax="6396.204000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid28" rmin="6396.204000" rmax="6397.236000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid29" rmin="6397.236000" rmax="6398.224000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid30" rmin="6398.224000" rmax="6399.256000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid31" rmin="6399.256000" rmax="6400.244000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid32" rmin="6400.244000" rmax="6401.276000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid33" rmin="6401.276000" rmax="6402.264000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid34" rmin="6402.264000" rmax="6403.276000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid35" rmin="6403.276000" rmax="6404.284000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid36" rmin="6404.284000" rmax="6405.296000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid37" rmin="6405.296000" rmax="6406.304000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid38" rmin="6406.304000" rmax="6407.316000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid39" rmin="6407.316000" rmax="6408.324000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid40" rmin="6408.324000" rmax="6409.336000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid41" rmin="6409.336000" rmax="6410.324000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid42" rmin="6410.324000" rmax="6411.356000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid43" rmin="6411.356000" rmax="6412.344000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid44" rmin="6412.344000" rmax="6413.376000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid45" rmin="6413.376000" rmax="6414.364000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid46" rmin="6414.364000" rmax="6415.396000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid47" rmin="6415.396000" rmax="6416.364000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid48" rmin="6416.364000" rmax="6417.416000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid49" rmin="6417.416000" rmax="6418.384000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid50" rmin="6418.384000" rmax="6419.436000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid51" rmin="6419.436000" rmax="6420.404000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid52" rmin="6420.404000" rmax="6421.456000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid53" rmin="6421.456000" rmax="6422.404000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid54" rmin="6422.404000" rmax="6423.476000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid55" rmin="6423.476000" rmax="6424.424000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid56" rmin="6424.424000" rmax="6425.496000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid57" rmin="6425.496000" rmax="6426.444000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid58" rmin="6426.444000" rmax="6427.516000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid59" rmin="6427.516000" rmax="6428.464000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid60" rmin="6428.464000" rmax="6429.516000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid61" rmin="6429.516000" rmax="6430.484000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid62" rmin="6430.484000" rmax="6431.536000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid63" rmin="6431.536000" rmax="6432.504000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid64" rmin="6432.504000" rmax="6433.556000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid65" rmin="6433.556000" rmax="6434.524000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+	<sphere name="solid66" rmin="6436.524000" rmax="6534.524000" deltaphi="TWOPI" deltatheta="PI" lunit="km" aunit="rad"/>
+</solids>
+<structure>
+	<volume name="volume0">
+		<materialref ref="material0"/>
+		<solidref ref="solid0"/>
+		<auxiliary auxtype="SensDet" auxvalue="0"/>
+	</volume>
+	<volume name="volume1">
+		<materialref ref="material1"/>
+		<solidref ref="solid1"/>
+		<auxiliary auxtype="SensDet" auxvalue="1"/>
+	</volume>
+	<volume name="volume2">
+		<materialref ref="material2"/>
+		<solidref ref="solid2"/>
+		<auxiliary auxtype="SensDet" auxvalue="2"/>
+	</volume>
+	<volume name="volume3">
+		<materialref ref="material3"/>
+		<solidref ref="solid3"/>
+		<auxiliary auxtype="SensDet" auxvalue="3"/>
+	</volume>
+	<volume name="volume4">
+		<materialref ref="material4"/>
+		<solidref ref="solid4"/>
+		<auxiliary auxtype="SensDet" auxvalue="4"/>
+	</volume>
+	<volume name="volume5">
+		<materialref ref="material5"/>
+		<solidref ref="solid5"/>
+		<auxiliary auxtype="SensDet" auxvalue="5"/>
+	</volume>
+	<volume name="volume6">
+		<materialref ref="material6"/>
+		<solidref ref="solid6"/>
+		<auxiliary auxtype="SensDet" auxvalue="6"/>
+	</volume>
+	<volume name="volume7">
+		<materialref ref="material7"/>
+		<solidref ref="solid7"/>
+		<auxiliary auxtype="SensDet" auxvalue="7"/>
+	</volume>
+	<volume name="volume8">
+		<materialref ref="material8"/>
+		<solidref ref="solid8"/>
+		<auxiliary auxtype="SensDet" auxvalue="8"/>
+	</volume>
+	<volume name="volume9">
+		<materialref ref="material9"/>
+		<solidref ref="solid9"/>
+		<auxiliary auxtype="SensDet" auxvalue="9"/>
+	</volume>
+	<volume name="volume10">
+		<materialref ref="material10"/>
+		<solidref ref="solid10"/>
+		<auxiliary auxtype="SensDet" auxvalue="10"/>
+	</volume>
+	<volume name="volume11">
+		<materialref ref="material11"/>
+		<solidref ref="solid11"/>
+		<auxiliary auxtype="SensDet" auxvalue="11"/>
+	</volume>
+	<volume name="volume12">
+		<materialref ref="material12"/>
+		<solidref ref="solid12"/>
+		<auxiliary auxtype="SensDet" auxvalue="12"/>
+	</volume>
+	<volume name="volume13">
+		<materialref ref="material13"/>
+		<solidref ref="solid13"/>
+		<auxiliary auxtype="SensDet" auxvalue="13"/>
+	</volume>
+	<volume name="volume14">
+		<materialref ref="material14"/>
+		<solidref ref="solid14"/>
+		<auxiliary auxtype="SensDet" auxvalue="14"/>
+	</volume>
+	<volume name="volume15">
+		<materialref ref="material15"/>
+		<solidref ref="solid15"/>
+		<auxiliary auxtype="SensDet" auxvalue="15"/>
+	</volume>
+	<volume name="volume16">
+		<materialref ref="material16"/>
+		<solidref ref="solid16"/>
+		<auxiliary auxtype="SensDet" auxvalue="16"/>
+	</volume>
+	<volume name="volume17">
+		<materialref ref="material17"/>
+		<solidref ref="solid17"/>
+		<auxiliary auxtype="SensDet" auxvalue="17"/>
+	</volume>
+	<volume name="volume18">
+		<materialref ref="material18"/>
+		<solidref ref="solid18"/>
+		<auxiliary auxtype="SensDet" auxvalue="18"/>
+	</volume>
+	<volume name="volume19">
+		<materialref ref="material19"/>
+		<solidref ref="solid19"/>
+		<auxiliary auxtype="SensDet" auxvalue="19"/>
+	</volume>
+	<volume name="volume20">
+		<materialref ref="material20"/>
+		<solidref ref="solid20"/>
+		<auxiliary auxtype="SensDet" auxvalue="20"/>
+	</volume>
+	<volume name="volume21">
+		<materialref ref="material21"/>
+		<solidref ref="solid21"/>
+		<auxiliary auxtype="SensDet" auxvalue="21"/>
+	</volume>
+	<volume name="volume22">
+		<materialref ref="material22"/>
+		<solidref ref="solid22"/>
+		<auxiliary auxtype="SensDet" auxvalue="22"/>
+	</volume>
+	<volume name="volume23">
+		<materialref ref="material23"/>
+		<solidref ref="solid23"/>
+		<auxiliary auxtype="SensDet" auxvalue="23"/>
+	</volume>
+	<volume name="volume24">
+		<materialref ref="material24"/>
+		<solidref ref="solid24"/>
+		<auxiliary auxtype="SensDet" auxvalue="24"/>
+	</volume>
+	<volume name="volume25">
+		<materialref ref="material25"/>
+		<solidref ref="solid25"/>
+		<auxiliary auxtype="SensDet" auxvalue="25"/>
+	</volume>
+	<volume name="volume26">
+		<materialref ref="material26"/>
+		<solidref ref="solid26"/>
+		<auxiliary auxtype="SensDet" auxvalue="26"/>
+	</volume>
+	<volume name="volume27">
+		<materialref ref="material27"/>
+		<solidref ref="solid27"/>
+		<auxiliary auxtype="SensDet" auxvalue="27"/>
+	</volume>
+	<volume name="volume28">
+		<materialref ref="material28"/>
+		<solidref ref="solid28"/>
+		<auxiliary auxtype="SensDet" auxvalue="28"/>
+	</volume>
+	<volume name="volume29">
+		<materialref ref="material29"/>
+		<solidref ref="solid29"/>
+		<auxiliary auxtype="SensDet" auxvalue="29"/>
+	</volume>
+	<volume name="volume30">
+		<materialref ref="material30"/>
+		<solidref ref="solid30"/>
+		<auxiliary auxtype="SensDet" auxvalue="30"/>
+	</volume>
+	<volume name="volume31">
+		<materialref ref="material31"/>
+		<solidref ref="solid31"/>
+		<auxiliary auxtype="SensDet" auxvalue="31"/>
+	</volume>
+	<volume name="volume32">
+		<materialref ref="material32"/>
+		<solidref ref="solid32"/>
+		<auxiliary auxtype="SensDet" auxvalue="32"/>
+	</volume>
+	<volume name="volume33">
+		<materialref ref="material33"/>
+		<solidref ref="solid33"/>
+		<auxiliary auxtype="SensDet" auxvalue="33"/>
+	</volume>
+	<volume name="volume34">
+		<materialref ref="material34"/>
+		<solidref ref="solid34"/>
+		<auxiliary auxtype="SensDet" auxvalue="34"/>
+	</volume>
+	<volume name="volume35">
+		<materialref ref="material35"/>
+		<solidref ref="solid35"/>
+		<auxiliary auxtype="SensDet" auxvalue="35"/>
+	</volume>
+	<volume name="volume36">
+		<materialref ref="material36"/>
+		<solidref ref="solid36"/>
+		<auxiliary auxtype="SensDet" auxvalue="36"/>
+	</volume>
+	<volume name="volume37">
+		<materialref ref="material37"/>
+		<solidref ref="solid37"/>
+		<auxiliary auxtype="SensDet" auxvalue="37"/>
+	</volume>
+	<volume name="volume38">
+		<materialref ref="material38"/>
+		<solidref ref="solid38"/>
+		<auxiliary auxtype="SensDet" auxvalue="38"/>
+	</volume>
+	<volume name="volume39">
+		<materialref ref="material39"/>
+		<solidref ref="solid39"/>
+		<auxiliary auxtype="SensDet" auxvalue="39"/>
+	</volume>
+	<volume name="volume40">
+		<materialref ref="material40"/>
+		<solidref ref="solid40"/>
+		<auxiliary auxtype="SensDet" auxvalue="40"/>
+	</volume>
+	<volume name="volume41">
+		<materialref ref="material41"/>
+		<solidref ref="solid41"/>
+		<auxiliary auxtype="SensDet" auxvalue="41"/>
+	</volume>
+	<volume name="volume42">
+		<materialref ref="material42"/>
+		<solidref ref="solid42"/>
+		<auxiliary auxtype="SensDet" auxvalue="42"/>
+	</volume>
+	<volume name="volume43">
+		<materialref ref="material43"/>
+		<solidref ref="solid43"/>
+		<auxiliary auxtype="SensDet" auxvalue="43"/>
+	</volume>
+	<volume name="volume44">
+		<materialref ref="material44"/>
+		<solidref ref="solid44"/>
+		<auxiliary auxtype="SensDet" auxvalue="44"/>
+	</volume>
+	<volume name="volume45">
+		<materialref ref="material45"/>
+		<solidref ref="solid45"/>
+		<auxiliary auxtype="SensDet" auxvalue="45"/>
+	</volume>
+	<volume name="volume46">
+		<materialref ref="material46"/>
+		<solidref ref="solid46"/>
+		<auxiliary auxtype="SensDet" auxvalue="46"/>
+	</volume>
+	<volume name="volume47">
+		<materialref ref="material47"/>
+		<solidref ref="solid47"/>
+		<auxiliary auxtype="SensDet" auxvalue="47"/>
+	</volume>
+	<volume name="volume48">
+		<materialref ref="material48"/>
+		<solidref ref="solid48"/>
+		<auxiliary auxtype="SensDet" auxvalue="48"/>
+	</volume>
+	<volume name="volume49">
+		<materialref ref="material49"/>
+		<solidref ref="solid49"/>
+		<auxiliary auxtype="SensDet" auxvalue="49"/>
+	</volume>
+	<volume name="volume50">
+		<materialref ref="material50"/>
+		<solidref ref="solid50"/>
+		<auxiliary auxtype="SensDet" auxvalue="50"/>
+	</volume>
+	<volume name="volume51">
+		<materialref ref="material51"/>
+		<solidref ref="solid51"/>
+		<auxiliary auxtype="SensDet" auxvalue="51"/>
+	</volume>
+	<volume name="volume52">
+		<materialref ref="material52"/>
+		<solidref ref="solid52"/>
+		<auxiliary auxtype="SensDet" auxvalue="52"/>
+	</volume>
+	<volume name="volume53">
+		<materialref ref="material53"/>
+		<solidref ref="solid53"/>
+		<auxiliary auxtype="SensDet" auxvalue="53"/>
+	</volume>
+	<volume name="volume54">
+		<materialref ref="material54"/>
+		<solidref ref="solid54"/>
+		<auxiliary auxtype="SensDet" auxvalue="54"/>
+	</volume>
+	<volume name="volume55">
+		<materialref ref="material55"/>
+		<solidref ref="solid55"/>
+		<auxiliary auxtype="SensDet" auxvalue="55"/>
+	</volume>
+	<volume name="volume56">
+		<materialref ref="material56"/>
+		<solidref ref="solid56"/>
+		<auxiliary auxtype="SensDet" auxvalue="56"/>
+	</volume>
+	<volume name="volume57">
+		<materialref ref="material57"/>
+		<solidref ref="solid57"/>
+		<auxiliary auxtype="SensDet" auxvalue="57"/>
+	</volume>
+	<volume name="volume58">
+		<materialref ref="material58"/>
+		<solidref ref="solid58"/>
+		<auxiliary auxtype="SensDet" auxvalue="58"/>
+	</volume>
+	<volume name="volume59">
+		<materialref ref="material59"/>
+		<solidref ref="solid59"/>
+		<auxiliary auxtype="SensDet" auxvalue="59"/>
+	</volume>
+	<volume name="volume60">
+		<materialref ref="material60"/>
+		<solidref ref="solid60"/>
+		<auxiliary auxtype="SensDet" auxvalue="60"/>
+	</volume>
+	<volume name="volume61">
+		<materialref ref="material61"/>
+		<solidref ref="solid61"/>
+		<auxiliary auxtype="SensDet" auxvalue="61"/>
+	</volume>
+	<volume name="volume62">
+		<materialref ref="material62"/>
+		<solidref ref="solid62"/>
+		<auxiliary auxtype="SensDet" auxvalue="62"/>
+	</volume>
+	<volume name="volume63">
+		<materialref ref="material63"/>
+		<solidref ref="solid63"/>
+		<auxiliary auxtype="SensDet" auxvalue="63"/>
+	</volume>
+	<volume name="volume64">
+		<materialref ref="material64"/>
+		<solidref ref="solid64"/>
+		<auxiliary auxtype="SensDet" auxvalue="64"/>
+	</volume>
+	<volume name="volume65">
+		<materialref ref="material65"/>
+		<solidref ref="solid65"/>
+		<auxiliary auxtype="SensDet" auxvalue="65"/>
+	</volume>
+	<volume name="volume66">
+		<materialref ref="material66"/>
+		<solidref ref="solid66"/>
+		<auxiliary auxtype="SensDet" auxvalue="66"/>
+	</volume>
+	<volume name="World">
+		<materialref ref="Vacuum"/>
+		<solidref ref="WorldBox"/>
+		<positionref ref="boxoffset"/>
+		<physvol>
+			<volumeref ref="volume0"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume1"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume2"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume3"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume4"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume5"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume6"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume7"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume8"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume9"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume10"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume11"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume12"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume13"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume14"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume15"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume16"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume17"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume18"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume19"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume20"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume21"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume22"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume23"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume24"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume25"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume26"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume27"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume28"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume29"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume30"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume31"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume32"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume33"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume34"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume35"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume36"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume37"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume38"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume39"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume40"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume41"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume42"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume43"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume44"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume45"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume46"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume47"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume48"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume49"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume50"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume51"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume52"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume53"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume54"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume55"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume56"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume57"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume58"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume59"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume60"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume61"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume62"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume63"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume64"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume65"/>
+			<positionref ref="center"/>
+		</physvol>
+		<physvol>
+			<volumeref ref="volume66"/>
+			<positionref ref="center"/>
+		</physvol>
+	</volume>
+</structure>
+
+<setup name="Exoplanet" version="1.0">
+	<world ref="World"/>
+</setup>
+</gdml>

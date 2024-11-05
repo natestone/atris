@@ -1,0 +1,33 @@
+# The program filter ccc can
+  * unit binary output of atris
+  * filter according to IID (Interface ID) 
+  * filter according to PDG
+  * filter according to IID and PDG
+
+Note that in March 2019 I've changed the binary output of AtRIS from:
+
+  long short char single single
+
+to
+  
+  long short short single single
+
+Compile as c code:
+
+g++ filter.cc -o filter
+
+Before using, make the program executable:
+
+chmod +x filter
+
+For the program to work, there must be a randoms file containing the first seeds of each run, assuming that
+you have used to intended naming scheme. This is something easily done with 'ls' and smart search and replace
+in vim. Else you can copy the randoms file that my script generated for you during simulation execution. 
+
+Assuming randoms is in place, you can execute the code:
+
+./filter prefix_name PDG_to_filter IID_to_filter
+
+If you want to use all PDG codes, use 666. 
+If you want to use all IDDs, use 666
+IID = 1 should correspond to the surface level, if you didn't mess it up
