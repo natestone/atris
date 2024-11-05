@@ -5,7 +5,8 @@ AtRIS: the Atmospheric Radiation Interaction Simulator.
 Author: Saša Banjac
 
  + For description and validation, please read the AtRIS validation papers by Banjac et al (2018).
- + Documentation can be found on https://et-wiki.physik.uni-kiel.de/atris/atris
+ + Documentation can be found on ~~https://et-wiki.physik.uni-kiel.de/atris/atris~~
+ + Documentation being ported to: https://github.com/natestone/atris/wiki
  + Author: Saša Banjac
  + 
 
